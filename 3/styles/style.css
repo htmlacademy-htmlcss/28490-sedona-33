@@ -60,6 +60,7 @@ a.button-header{
 
 .description{
 	font-size: 30px;
+	line-height: 36px;
 	text-align: center;
 	text-align: center;
 	text-transform: uppercase;
@@ -75,6 +76,8 @@ a.button-header{
 	text-decoration: none;
 }
 
+.advantages-item
+
 .advantages-title{
 	font-weight: 700;
 	font-size: 24px;
@@ -89,11 +92,43 @@ a.button-header{
 	text-align: center;
 }
 
+.advantages-list li:nth-child(3){
+	background-color: hsl(204 48% 67% / 0.12);
+}
+
+.advantages-list li:nth-child(4){
+	background-color: hsl(204 48% 67% / 0.2)
+}
+
+.advantages-list li:nth-child(5){
+	background-color: hsl(204 48% 67% / 0.12);
+}
+
 .advantages-number, .advantages-description{
 	text-align: center;
 }
+
 .true-town{
 	background-color: #83B3D3;
+	color: #ffffff;
+}
+
+h3, p{
+	color: inherit;
+}
+
+.features-true-town-list li:first-child{
+	background: center no-repeat url(../img/icon-1.svg);
+	background-color: hsl(204 48% 67% / 0.12)
+}
+
+.features-true-town-list li:nth-child(2){
+	background: center no-repeat url(../img/icon-2.svg);
+}
+
+.features-true-town-list li:nth-child(3){
+	background: center no-repeat url(../img/icon-3.svg);
+	background-color: hsl(204 48% 67% / 0.12)
 }
 
 .devils-brige{
@@ -137,6 +172,7 @@ ul{
 	background-image: url(../img/background-footer.jpg);
 	background-color: #68A2CA;
 	background-size: 100%;
+	background-repeat: no-repeat;
 	height: 411px;
 }
 
@@ -181,10 +217,6 @@ ul{
 	height: 61px;
 }
 
-.networks{
-	height: 120px;
-}
-
 .phone{
 	color: #000000;
 	font-size: 40px;
@@ -197,7 +229,7 @@ ul{
 .inner-header{
 	background-image: url(../img/catalog-background.jpg);
 	background-size: 100%;
-	height: 408px;
+	background-repeat: no-repeat;
 }
 
 .catalog-filter-title{
