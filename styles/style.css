@@ -340,7 +340,6 @@ h3, p{
 	background-color: #68A2CA;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	height: 411px;
 	display: flex;
 	flex-direction: column;
 }
@@ -511,7 +510,8 @@ h3, p{
 	text-align: center;
 	text-transform: uppercase;
 	color: #FFFFFF;
-
+	padding: 0;
+	margin-bottom: 20px;
 }
 
 .cancel-button{
@@ -523,6 +523,12 @@ h3, p{
 	line-height: 23px;
 	text-align: center;
 	color: #FFFFFF;
+	padding: 0;
+}
+
+.filter-buttons{
+	display: flex;
+	flex-direction: column;
 }
 
 .sorting-hotel{
@@ -604,11 +610,14 @@ h3, p{
 .hotel-list{
 	width: 1056px;
 	display: flex;
+	gap: 10px;
 	flex-wrap: wrap;
 	margin: 0 auto;
+	padding: 0;
 }
 
 .hotel-card{
+	display: block;
 	width: 339px;
 }
 
@@ -707,6 +716,7 @@ h3, p{
 	line-height: 26px;
 	text-align: center;
 	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .pagination-show-more{
