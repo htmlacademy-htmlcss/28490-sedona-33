@@ -21,21 +21,21 @@
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul> 
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-user">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-user-item" href="#">
               <span class="visually-hidden">Поиск</span>
               <img src="img/search.svg" width="18.05" height="18.1" alt="Поиск">
             </a>
           </li>          
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-user-item" href="#">
               <span class="visually-hidden">Избранное</span>
               <img src="img/favorite.svg" width="18.05" height="17" alt="Избранное">
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link button-header" href="#">Хочу сюда</a>
+            <a class="navigation-user-item button-header" href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>
@@ -50,11 +50,15 @@
               <img class="icon-home" src="img/catalog-home.svg" width="12" height="12" alt="Логотип">
             </li>
             <li class="breadcrumbs-item">
+              <img class="breadcrumbs-arrow" src="img/nav-link-catalog.svg" width="5" height="8" alt="Стрелка">
+            </li>
+            <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
           <section class="catalog-hotels">
-            <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+            <div class="catalog-filter-conteiner">
+              <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https:/echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -102,35 +106,44 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="select-button" type="submit">Применить</button>
-              <button class="cancel-button" type="submit">Сбросить</button>
             </form>  
+            <button class="select-button" type="submit">Применить</button>
+            <button class="cancel-button" type="submit">Сбросить</button>
+            </div>
+            
         </div>
               
         </div>
         <div class="select-hotel">
-          <p>Найдено гостиниц: 38</p>
+          <p class="find-hotels-title">Найдено гостиниц: 38</p>
           <select class="select-control" aria-label="Сортировка гостиниц">
             <option class="sorting-hotel" value="cheap">Сначала дешевые</option>
           </select>
-          <div class="showen-icons">
-            <a href="#" class="button visual-icon-button">
-              <span class="visually-hidden">Показать сетку</span>
-              <img class="visual-icon" src="img/grid.svg" width="16" height="14" alt="Показать сетку">
-            </a>
-            <a href="#" class="button visual-icon-button">
-              <span class="visually-hidden">Показать по одному</span>
-              <img class="visual-icon" src="img/by-one.svg" width="16" height="14" alt="Показать по-одному">
-            </a>
-            <a href="#" class="button visual-icon-button">
-              <span class="visually-hidden">Показать списком</span>
-              <img class="visual-icon" src="img/list.svg" width="16" height="14" alt="Показать списком">
-            </a>          
-          </div>
+          <ul class="showen-icons">
+            <li>
+              <a href="#" class="button visual-icon-button">
+                <span class="visually-hidden">Показать сетку</span>
+                <img class="visual-icon" src="img/grid.svg" width="16" height="14" alt="Показать сетку">
+              </a>              
+            </li>
+            <li>
+              <a href="#" class="button visual-icon-button">
+                <span class="visually-hidden">Показать по одному</span>
+                <img class="visual-icon" src="img/by-one.svg" width="16" height="14" alt="Показать по-одному">
+              </a>              
+            </li>
+            <li>
+              <a href="#" class="button visual-icon-button">
+                <span class="visually-hidden">Показать списком</span>
+                <img class="visual-icon" src="img/list.svg" width="16" height="14" alt="Показать списком">
+              </a>               
+            </li>
+         
+          </ul>
           
         </div>
         <ul class="hotel-list">
-          <div class="hotels-container-line-1">
+
             <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-image" src="img/hotel-1.jpg" width="299" height="206" alt="Amara Resort & Spa">
@@ -164,8 +177,8 @@
             <button class="hotel-like-button-checked button">В избранном</button> 
             <p class="rating">Рейтинг: 9,2</p>       
           </li>
-          </div>
-          <div class="hotels-container-line-2">
+
+
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
                 <img class="hotel-card-image" src="img/hotel-4.jpg" width="299" height="206" alt="GreenTree Inn">
@@ -176,9 +189,7 @@
               <a class="hotel-more-button button" href="#">подробнее</a>
               <button class="hotel-like-button button">В избранное</button>
               <p class="rating">Рейтинг: 9,2</p> 
-            </li>              
-          </div>
-                 
+            </li>                  
         </ul>
         <button class="button pagination-show-more" type="button">Загрузить ещё</button>
         <div class="pagination-line">
@@ -204,7 +215,7 @@
               <a class="button pagination-link" href="#">10</a>
             </li>
           </ul>
-          <h4 class="hotel-current">Гостиниц на странице:</h4>
+          <p class="hotel-current">Гостиниц на странице:</p>
           <select class="select-control hotel-current-count" aria-label="Гостиниц на странице">
             <option class="hotel-current-count" value="cheap">4</option>
           </select>  
