@@ -50,7 +50,7 @@ ul{
 .main-nav{
 	display: grid;
 	grid-template-columns: 400px 1fr;
-	column-gap: 30px;
+	column-gap: 300px;
 }
 
 .navigation-list{
@@ -65,16 +65,18 @@ ul{
 .navigation-user{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	margin-right: 70px;
+	padding: 0;
+	width: 250px;
 }
 
 .navigation-user-item{
 	display: block;
-
-	min-width: 42px;
-	min-height: 66px;
+	min-width: 18px;
+	min-height: 18px;
 }
-
-
 
 .navigation-link{
 	display: block;
@@ -340,7 +342,6 @@ h3, p{
 	background-color: #68A2CA;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	height: 411px;
 	display: flex;
 	flex-direction: column;
 }
@@ -355,11 +356,13 @@ h3, p{
 }
 
 .mailing-description{
+	width: 400px;
 	font-size: 22px;
 	line-height: 26px;
 	text-align: center;
 	color: #ffffff;
-	margin: 15px 240px 26px 240px;
+	margin: 29px 240px 26px 240px;
+	min-height: 52px;
 }
 
 .mailing-email-form{
@@ -511,7 +514,8 @@ h3, p{
 	text-align: center;
 	text-transform: uppercase;
 	color: #FFFFFF;
-
+	padding: 0;
+	margin-bottom: 20px;
 }
 
 .cancel-button{
@@ -523,6 +527,12 @@ h3, p{
 	line-height: 23px;
 	text-align: center;
 	color: #FFFFFF;
+	padding: 0;
+}
+
+.filter-buttons{
+	display: flex;
+	flex-direction: column;
 }
 
 .sorting-hotel{
@@ -604,11 +614,14 @@ h3, p{
 .hotel-list{
 	width: 1056px;
 	display: flex;
+	gap: 10px;
 	flex-wrap: wrap;
 	margin: 0 auto;
+	padding: 0;
 }
 
 .hotel-card{
+	display: block;
 	width: 339px;
 }
 
@@ -707,6 +720,7 @@ h3, p{
 	line-height: 26px;
 	text-align: center;
 	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .pagination-show-more{
