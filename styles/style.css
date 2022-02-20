@@ -50,7 +50,7 @@ ul{
 .main-nav{
 	display: grid;
 	grid-template-columns: 400px 1fr;
-	column-gap: 30px;
+	column-gap: 300px;
 }
 
 .navigation-list{
@@ -65,16 +65,18 @@ ul{
 .navigation-user{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	margin-right: 70px;
+	padding: 0;
+	width: 250px;
 }
 
 .navigation-user-item{
 	display: block;
-
-	min-width: 42px;
-	min-height: 66px;
+	min-width: 18px;
+	min-height: 18px;
 }
-
-
 
 .navigation-link{
 	display: block;
@@ -354,11 +356,13 @@ h3, p{
 }
 
 .mailing-description{
+	width: 400px;
 	font-size: 22px;
 	line-height: 26px;
 	text-align: center;
 	color: #ffffff;
-	margin: 15px 240px 26px 240px;
+	margin: 29px 240px 26px 240px;
+	min-height: 52px;
 }
 
 .mailing-email-form{
