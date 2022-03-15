@@ -18,7 +18,7 @@ html{
 	height: 100%;
 }
 
-.conteiner {
+.container {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
@@ -27,6 +27,8 @@ html{
  	font-style: normal;
  	font-size: 18px;
 	line-height: 21px;
+	min-width: 1200px;
+	box-shadow: 0 40px 0 40px #F2F2F2;
 }
 
 .main-container{
@@ -47,6 +49,11 @@ ul{
 	margin: 0 auto;
 }
 
+
+.index-logo{
+	z-index: 1;
+}
+
 .main-nav{
 	display: grid;
 	grid-template-columns: 400px 1fr;
@@ -55,10 +62,8 @@ ul{
 
 .navigation-list{
 	display: flex;
-	justify-content: space-between;
+
 	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
 	width: 400px;
 }
 
@@ -78,6 +83,7 @@ ul{
 }
 
 .navigation-link{
+	position: relative;
 	display: block;
 	font-size: 20px;
 	line-height: 26px;
@@ -88,8 +94,16 @@ ul{
 	color: #756257;
 }
 
+.navigation-link:focus{
+	opacity: 0.3;
+}
+
+.navigation-item-current:focus{
+	border-bottom: 2px solid #756257;
+}
+
 .navigation-user-item:hover .navigation-icon{
-	fill: #756257;
+	color: #756257;
 }
 
 .button-header:hover{
@@ -106,12 +120,13 @@ ul{
 }
 
 .navigation-icon{
-	position: relative;
-	top: 10px;
+	position: absolute;
+	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	margin: auto;
+	border: 3px transparent;
 }
 
 .button-header{
@@ -368,7 +383,6 @@ h3, p{
 	border-style: none;
 	width: 575px;
 	height: 60px;
-	font-weight: 700;
 	font-size: 20px;
 	line-height: 36px;
 	text-align: center;
@@ -380,6 +394,10 @@ h3, p{
 	margin-bottom: 93px;
 }
 
+.search-hotel-button-text{
+	margin: 0;
+}
+
 .search-hotel-button:hover{
 	background: #615048;
 }
@@ -387,6 +405,15 @@ h3, p{
 .search-hotel-button:focus{
 	background: #615048;
 	border: 3px solid #83B3D3;
+}
+
+.search-hotel-button:active{
+	background: #615048;
+
+}
+
+.search-hotel-button-text:active{
+	opacity: 0.3;	
 }
 
 .mailing{
@@ -467,6 +494,14 @@ h3, p{
 	border: 3px solid #756257;
 }
 
+.mailing-button-text{
+	margin: 0;
+}
+
+.mailing-button-text:active{
+	opacity: 0.3;
+}
+
 .footer{
 	display: flex;
 	justify-content: space-around;
@@ -478,6 +513,78 @@ h3, p{
 	display: flex;
 	justify-content: space-around;
 	width: 107px;
+}
+
+.twitter-logo, .facebook-logo, .youtube-logo{
+	fill: #83B3D3;
+}
+
+.twitter, .facebook, .youtube{
+	border: 3px transparent;
+
+}
+
+.twitter-logo:hover, .facebook-logo:hover, .youtube-logo:hover{
+	fill: #68A2CA;
+}
+
+.twitter:focus, .facebook:focus, .youtube:focus{
+	fill: #68A2CA;
+	border: 3px solid #83B3D3;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.twitter-logo:active, .facebook-logo:active, .youtube-logo:active{
+	opacity: 0.3
+}
+
+.twitter{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+.twitter-logo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.facebook{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+.facebook-logo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.youtube{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+.youtube-logo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
 }
 
 .phone{
@@ -503,14 +610,21 @@ h3, p{
 	width: 361px;
 }
 
+.htmlacademy-logo{
+	fill: #000000;
+}
+
 .htmlacademy-logo:hover{
-	color: #756257;
+	fill: #756257;
 }
 
 .htmlacademy-logo:focus{
+	fill: #756257;
 	border: 3px solid #83B3D3;
-	box-sizing: border-box;
-	border-radius: 10px;	
+}
+
+.htmlacademy-logo:active{
+	opacity: 0.3;
 }
 
 .inner-header{
@@ -795,8 +909,9 @@ h3, p{
 }
 
 .rating-stars{
+	width: 300px;
 	display: flex;
-	justify-items: space-between;
+	justify-content: space-between;
 }
 
 .star{
@@ -856,6 +971,9 @@ h3, p{
 	width: 55px;
 	height: 55px; 
 	margin-right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .pagination li:first-child{
@@ -964,6 +1082,29 @@ h3, p{
 	font-size: 30px;
 	line-height: 40px;
 	text-transform: uppercase;
+	grid-column: 1/5;
+}
+
+.arriving-data{
+	font-family: PT Sans;	
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 40px;
+	grid-column: 1/2;
+}
+
+.input-arriving-data{
+	font-family: PT Sans;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 40px;
+	grid-column: 2/5;
+}
+
+.modal-content{
+	display: grid;
+	grid-template-rows: repeat(6, 50px);
+	grid-template-columns: repeat(4, 155px);
 }
 
 .warning{
@@ -983,6 +1124,6 @@ h3, p{
 
 
 
-.modal-container-close{
+/*.modal-container-close{
 	display: none;
 }
