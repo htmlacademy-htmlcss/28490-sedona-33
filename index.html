@@ -192,36 +192,44 @@
     </footer>
     </div>
     <div class="modal-container modal-container-close">
-      <div class="modal modal-hotel-search">
+      <div class="modal modal-search-hotel">
+        
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" fill="#000"/></svg>
         </button>
         <section class="modal-content">
-          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group">
-              <label for="auth-login">Дата заезда:</label>
-              <input class="auth-form-field field" type="text" name="arriving-data" placeholder="27 апреля 2020">
+              <label class="arriving-data">Дата заезда:</label>
+              <input class="arriving-data-field field" type="text" name="arriving-data" placeholder="27 апреля 2020">
             </p>
             <span class="warning">Мы не можем отправить вас в прошлое.</span>
             <p class="field-group">
-              <label for="auth-password">Дата выезда:</label>
-              <input class="auth-form-field field" type="text" name="depature-data" placeholder="1 сентября 2021">
+              <label class="depature-date">Дата выезда:</label>
+              <input class="depature-date-field field" type="text" name="depature-data" placeholder="1 сентября 2021">
             </p>
-            <span>На эти даты есть свободные номера. Пока есть.</span>
-            <p class="field-group">
-              <label>Взрослые:</label>
-              <input type="text" name="aduld-count" placeholder="2">
+            <span class="free-data">На эти даты есть свободные номера. Пока есть.</span>
+            <div class="count-people">
+              <p class="field-group field-count-people">
+              <label class="adults-count">Взрослые:</label>
+              <input class="adults-count-field field" type="text" name="aduld-count" placeholder="2">
             </p>
-            <p>
-              <label>Дети:</label>
+            <p class="field-group field-count-people">
+              
+              <label class="kids-count">Дети:</label>
               <div class="info-icon">
                 <img class="info-icon-img" src="img/info.svg" width="1" height="9">
               </div>
-              <input type="text" name="aduld-count" placeholder="1">
+              <input class="kids-count-field field" type="text" name="aduld-count" placeholder="1">   
             </p>
+            </div>
           </form>
+          <button class="modal-search-button">
+           Найти 
+          </button>
         </section>
         
       </div>

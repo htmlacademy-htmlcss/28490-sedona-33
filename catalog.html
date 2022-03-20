@@ -62,6 +62,7 @@
             <div class="catalog-filter-conteiner">
               <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https:/echo.htmlacademy.ru/" method="get">
+              <div class="filters">
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
@@ -109,15 +110,33 @@
                 </ul>
               </fieldset>
             </form> 
-            <div class="filter-buttons"> 
-              <button class="select-button" type="submit">Применить</button>
-              <button class="cancel-button" type="submit">Сбросить</button>
             </div>
-          </div>
-            
-        </div>
-              
-        </div>
+            <p class="price-title">Стоимость, ₽:</p>
+            <div class="price">
+              <div class="price-box">
+                <input class="range-input-min" type="number" name="min-price">
+                <input class="range-input-max" type="number" name="max-price">
+              </div>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 640px; width: 227px">
+                    <button class="range-toggle toggle-main">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div> 
+
+              </div>
+              <div class="filter-buttons"> 
+                <button class="select-button" type="submit">Применить</button>
+                <button class="cancel-button" type="submit">Сбросить</button>
+              </div>
+            </div>
+          </div>  
+
         <div class="select-hotel">
           <p class="find-hotels-title">Найдено гостиниц: 38</p>
           <select class="select-control" aria-label="Сортировка гостиниц">
