@@ -1125,29 +1125,32 @@ h3, p{
 	background: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container {
-	position: fixed;
-  	top: 0;
-  	left: 0;
-  	display: flex;
-  	width: 100%;
-  	height: 100%;
-	background: rgba(242, 242, 242, 0.8);
+.modal{
+	position: relative;
+	margin: auto;
+	padding: 40px;
+	width: 715px;
+	height: 561px;
+	background-color: #ffffff;
+	box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+	border-radius: 30px;
+	display: grid;
+	grid-template-rows: minmax(min-content, max-content);
+}
+
+
+.modal-search-hotel{
+	width: 715px;
+	padding: 0;
 }
 
 
 .modal{
-	padding: 0;
-	background-color: rgb(96, 143, 204);
-	border: 1px solid rgb(24, 84, 133);
-	text-align: center;
 	font-size: 22px;
 	font-family: sans-serif;
 	color: #fff;
 	width: 715px;
-	display: grid;
-	grid-template-rows: minmax(min-content, max-content);
-
+	height: fit-content;
 }
 
 .modal-title{
@@ -1159,7 +1162,8 @@ h3, p{
 	margin-left: 68px;
 	margin-top: 62px;
 	margin-bottom: 32px;
-	height: 67px;
+	color: #000000;
+	width: 499px;
 
 }
 
@@ -1182,13 +1186,95 @@ h3, p{
 }
 
 .field-group{
-	
 	display: flex;
+	align-items: center;
+	margin: 0;
+	margin-left: 70px;
+}
+
+.arriving-data, .depature-date, .adults-count, .kids-count{
+	font-family: PT Sans;
+	font-weight: 700;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+}
+
+.arriving-data, .depature-date{
+	width: 155px;
+	height: fit-content;
+}
+
+.arriving-data-field{
+	width: 420px;
+	background: #F2F2F2;
+	border-radius: 4px;
+}
+
+.depature-date-field{
+	width: 420px;
+	background: #F2F2F2;
+	border-radius: 4px;
+}
+
+.count-people{
+	display: flex;
+	align-items: center;
+}
+
+.adults-count{
+	width: 155px;
+}
+
+.kids-count{
+	width: 54px;
+}
+
+.info-icon{
+	width: 25px;
+	height: 25px;
+	margin-right: 18px;
+	background-color: #83B3D3;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.info-icon-img{
 
 }
 
-.arriving-data{
+.adults-count-field{
+	width: 133px;
+	padding: 0;
+	border-radius: 4px;
 }
+
+.kids-count-field{
+	width: 133px;
+
+	padding: 0;
+	border-radius: 4px;
+}
+
+.modal-search-button{
+	font-family: 'PT Sans';
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #FFFFFF;	
+	width: 575px;
+	height: 60px;
+	background: #83B3D3;
+	border-radius: 10px;	
+	border: none;
+	margin-left: 70px;
+	padding: 0;
+	margin-top: 40px;
+}
+
+
 
 
 
