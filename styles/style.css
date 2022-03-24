@@ -481,6 +481,7 @@ h3, p{
 	margin-bottom: 93px;
 	background-color: #F2F2F2;
 	border: none;
+	border-radius: 10px 10px 10px 10px;	
 }
 
 
@@ -488,7 +489,7 @@ h3, p{
 	font-family: PT Sans;
 	font-weight: 400;
 	background: #F2F2F2;
-	border-radius: 0px 10px 10px 0px;	
+	border-radius: 10px 0px 00px 10px;	
 	border-style: none;
 	width: 600px;
 	height: 60px;
@@ -497,6 +498,7 @@ h3, p{
 	line-height: 36px;
 	color: #ffffff;
 	padding: 0;
+
 }
 
 .field:hover{
@@ -505,7 +507,13 @@ h3, p{
 
 .field:focus{
 	background: #E6E6E6;
-	border: 3px solid #83B3D3
+	outline: 3px solid #83B3D3;
+}
+
+.field:invalid {
+	outline: 2px solid #FF5757;
+
+	border-radius: 10px 0px 0px 10px;
 }
 
 .mailing-button{
@@ -647,7 +655,7 @@ h3, p{
 }
 
 .phone:focus{
-	border: 3px solid #83B3D3;
+	outline: 3px solid #83B3D3;
 	box-sizing: border-box;
 	border-radius: 10px;
 
@@ -786,7 +794,7 @@ h3, p{
 
 .control-mark {
   position: absolute;
-  top: 2px;
+
   left: 0;
   width: 16px;
   height: 16px;
@@ -801,7 +809,6 @@ h3, p{
   border-color: #242424;
 }
 
-/* Label */
 .control-label {
   font-weight: 400;
 
@@ -828,21 +835,14 @@ h3, p{
 .control-input[type="checkbox"]:checked + .control-mark::before,
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
-  top: 7px;
-  left: 2px;
+  top: 4px;
+  left: 4px;
   width: 12px;
-  height: 2px;
-  background-color: #242424;
+  height: 10px;
+  background-image: url(../img/checked.svg);
   content: "";
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before {
-  transform: rotate(45deg);
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  transform: rotate(-45deg);
-}
 
 .control-input[type="radio"] + .control-mark {
 	background: #FFFFFF;
@@ -850,6 +850,17 @@ h3, p{
   border-radius: 50%;
   width: 20px;
   height: 20px;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
 }
 
 .select-button{
@@ -926,17 +937,73 @@ h3, p{
 }
 
 .price-box{
-	width: 287px;
+	display: flex;
+	align-items: center;
+
 	height: 48px;
 	border: 2px solid #FFFFFF;
 	box-sizing: border-box;
 	border-radius: 4px;
 }
 
+.price-box-min{
+	font-family: PT Sans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	text-align: right;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	width: 145px;
+	border-right: 1px solid #FFFFFF;
+}
+
+.price-box-max{
+	font-family: PT Sans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	text-align: right;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	width: 145px;
+	border-left: 1px solid #FFFFFF;
+}
+
+.range-input-min{
+	font-family: PT Sans;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #FFFFFF;
+	border: none;
+	width: 124px;
+	height: 48px;
+	background: transparent;
+	padding: 0;
+}
+
+.range-input-max{
+	font-family: PT Sans;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #FFFFFF;
+	border: none;
+	width: 114px;
+	height: 48px;	
+	background: transparent;
+	padding: 0;
+}
+
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: #FFFFFF;
+  background-color: #BFBBBB;
 
   border-radius: 2px;
   margin-bottom: 94px;
@@ -946,7 +1013,7 @@ h3, p{
 .range-bar {
 	position: absolute;
 	height: 4px;
-	background-color: #111111;
+	background-color: #ffffff;
 }
 
 .range-toggle {
@@ -979,25 +1046,6 @@ h3, p{
 	top: -8px;
 	right: -10px;
 }
-
-.range-input-min{
-	border: none;
-	border-right: 2px solid #FFFFFF;
-	width: 145px;
-	height: 48px;
-	background: transparent;
-	padding: 0;
-}
-
-.range-input-max{
-	border: none;
-	border-left: 2px solid #FFFFFF;
-	width: 145px;
-	height: 48px;	
-	background: transparent;
-	padding: 0;
-}
-
 
 .filter-buttons{
 	display: flex;
@@ -1047,13 +1095,13 @@ h3, p{
 }
 
 .select-control:hover {
-	border: 2px solid #83B3D3;
+	outline: 2px solid #83B3D3;
 	box-sizing: border-box;
 	border-radius: 4px;
 }
 
-.select-control:focus {
-	border: 2px solid #83B3D3;
+.select-control:focus-visible {
+	outline: 2px solid #83B3D3;
 	box-sizing: border-box;
 	border-radius: 4px;
 }
@@ -1064,9 +1112,6 @@ h3, p{
 	border-radius: 4px;
 	opacity: 0.3;
 }
-
-
-
 
 
 .showen-icons{
@@ -1169,7 +1214,6 @@ h3, p{
 
 .button{
 	font-weight: 700;
-	border-radius: 4px;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #FFFFFF;
@@ -1190,6 +1234,7 @@ h3, p{
 	line-height: 21px;
 	text-align: center;
 	background: #756257;
+	border-radius: 4px;
 	margin-right: 26px;
 }
 
@@ -1474,14 +1519,33 @@ h3, p{
 	color: #000000;
 }
 
-.arriving-data-field{
-	width: 420px;
+.arriving-data-container{
 	background: #F2F2F2;
 	border-radius: 4px;
 }
 
+.arriving-data-field{
+	width: 390px;
+	background: #F2F2F2;
+	border-radius: 4px;
+}
+
+.calendar{
+	width: 15px;
+	height: 15px;
+	background-image: url(../img/calendar.svg);
+	margin: 18px 19px 17px 0;
+	padding: 0;
+	border: 0;
+}
+
+.depature-date-container{
+	background: #F2F2F2;
+	border-radius: 4px;	
+}
+
 .depature-date-field{
-	width: 420px;
+	width: 390px;
 	background: #F2F2F2;
 	border-radius: 4px;
 }
@@ -1623,7 +1687,7 @@ h3, p{
 }
 
 
-.modal-container{
+/*.modal-container{
 	display: none;
 }
 
