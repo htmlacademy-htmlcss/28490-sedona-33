@@ -1674,6 +1674,15 @@ h3, p{
 	border-radius: 4px;
 }
 
+.adults-count-field:hover {
+	background: #F2F2F2;
+}
+
+.adults-count-field:focus{
+	background: #F2F2F2;
+	outline: none;
+}
+
 .tooltip{
 	position: relative;
 	color: #242424;
@@ -1681,12 +1690,12 @@ h3, p{
 }
    
 .triangle::after {
-    content: ''; 
-    position: absolute; /* Абсолютное позиционирование */
-    left: -20px; bottom: 20px; /* Положение треугольника */
-    border: 10px solid transparent; /* Прозрачные границы */
-    border-top: 10px solid #333333; /* Добавляем треугольник */
-   }
+  content: ''; 
+  position: absolute; 
+  left: -20px; bottom: 20px; 
+  border: 10px solid transparent; 
+  border-top: 10px solid #333333; 
+}
 
 .tooltip-toggle{
 	display: block;
@@ -1760,6 +1769,10 @@ h3, p{
 	border-radius: 4px;
 }
 
+.kids-count-field:hover {
+	background: #F2F2F2;
+}
+
 .kids-count-field:focus {
 	outline: none;
 }
@@ -1816,8 +1829,7 @@ h3, p{
 }
 
 
-
-/*.modal-container{
+.modal-container{
 	display: none;
 }
 
