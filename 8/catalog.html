@@ -124,25 +124,23 @@
 
                 <div class="price-box">
                   <div class="price-box-min">
-                    <input class="range-input-min" type="number" placeholder="0" name="min-price">
-                    <label class="">от</label>                    
+                    <input class="range-input-min" type="text" placeholder="0" name="min-price">
+                    <label class="price-from">от</label>                    
                   </div>
 
                   <div class="price-box-max">
-                    <input class="range-input-max" type="number" placeholder="9000" name="max-price">   
-                    <label>до</label>                 
+                    <input class="range-input-max" type="text" placeholder="9000" name="max-price">   
+                    <label class="price-to">до</label>                 
                   </div>
 
                 </div>              
-            
-
               <div class="range">
                 <div class="range-scale">
                   <div class="range-bar" style="width: 227px">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
@@ -151,14 +149,13 @@
             </div>
               <div class="filter-buttons"> 
                 <button class="select-button" type="submit">Применить</button>
-                <button class="cancel-button" type="submit">Сбросить</button>
+                <button class="cancel-button" type="button">Сбросить</button>
               </div>
             </div>
           </div>
 
              </div> 
-            </form> 
-             
+            </form>            
 
         <div class="select-hotel">
           <p class="find-hotels-title">Найдено гостиниц: 38</p>

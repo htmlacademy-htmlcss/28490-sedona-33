@@ -40,6 +40,10 @@ body{
 	flex-grow: 1;
 }
 
+main{
+	margin-top: -10px;
+}
+
 p{
 	color: #333333;
 }
@@ -56,6 +60,7 @@ ul{
 
 
 .index-logo{
+	position: relative;
 	z-index: 1;
 }
 
@@ -167,7 +172,7 @@ ul{
 }
 
 .main-index{
-	margin-top: -5px;
+		margin-top: -10px;
 }
 
 .welcome{
@@ -910,7 +915,7 @@ h3, p{
 
 .cancel-button:focus{
 	height: 32px;
-	border: 3px solid #83B3D3;
+	outline: 3px solid #83B3D3;
 	box-sizing: border-box;
 	border-radius: 4px;
 }
@@ -939,11 +944,8 @@ h3, p{
 .price-box{
 	display: flex;
 	align-items: center;
-
 	height: 48px;
-	border: 2px solid #FFFFFF;
-	box-sizing: border-box;
-	border-radius: 4px;
+	border: none;
 }
 
 .price-box-min{
@@ -957,7 +959,23 @@ h3, p{
 	display: flex;
 	align-items: center;
 	width: 145px;
-	border-right: 1px solid #FFFFFF;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px 0 0 4px;
+	border-right: 2px solid #FFFFFF;
+}
+
+.price-box-min:hover {
+	opacity: 0.6;
+	border: 2px solid #FFFFFF;
+
+}
+
+.range-input-min:hover {
+	border: none;
+}
+
+.range-input-min:active {
+	border: none;
 }
 
 .price-box-max{
@@ -972,6 +990,8 @@ h3, p{
 	align-items: center;
 	width: 145px;
 	border-left: 1px solid #FFFFFF;
+	border: 2px solid #FFFFFF;
+	border-radius: 0 4px 4px 0;
 }
 
 .range-input-min{
@@ -981,10 +1001,11 @@ h3, p{
 	line-height: 23px;
 	color: #FFFFFF;
 	border: none;
-	width: 124px;
+	width: 105px;
 	height: 48px;
 	background: transparent;
 	padding: 0;
+	padding-left: 19px;
 }
 
 .range-input-max{
@@ -998,6 +1019,25 @@ h3, p{
 	height: 48px;	
 	background: transparent;
 	padding: 0;
+}
+
+/*.range-input-min, .price-box-max:hover {
+	opacity: 0.6;
+	border: 2px solid #FFFFFF;
+}
+
+.range-input-min, .price-box-max:focus {
+	border: none;
+}
+
+.range-input-min, .price-box-max:active {
+	border: none;
+}
+
+*/
+
+.price-from, .price-to{
+	opacity: 0.3;
 }
 
 .range-scale {
@@ -1213,6 +1253,7 @@ h3, p{
 }
 
 .button{
+	font-family: PT Sans;	
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -1226,12 +1267,12 @@ h3, p{
 }
 
 .hotel-more-button{
-	font-family: PT Sans;
-	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
 	width: 133px;	
 	height: 37px;
 	font-size: 16px;
-	line-height: 21px;
+	line-height: 38px;
 	text-align: center;
 	background: #756257;
 	border-radius: 4px;
@@ -1244,10 +1285,12 @@ h3, p{
 
 .hotel-more-button:focus{
 	background: #615048;
-	border: 2px solid #E6E6E6;
+	outline: 2px solid #E6E6E6;
 }
 
 .hotel-like-button{
+	font-size: 16px;
+	line-height: 21px;
 	width: 141px;
 	height: 37px;
 	background: #82B3D3;
@@ -1266,6 +1309,8 @@ h3, p{
 }
 
 .hotel-like-button-checked{
+	font-size: 16px;
+	line-height: 21px;
 	width: 141px;
 	height: 37px;
 	background: #7DB54F;
@@ -1299,7 +1344,6 @@ h3, p{
 	font-size: 16px;
 	line-height: 21px;
 	margin: 0;
-
 	margin-bottom: 54px;
 	padding: 9px 0;
 	width: 160px;
@@ -1522,21 +1566,16 @@ h3, p{
 .arriving-data-container{
 	background: #F2F2F2;
 	border-radius: 4px;
+
 }
 
 .arriving-data-field{
-	width: 390px;
+	width: 420px;
 	background: #F2F2F2;
 	border-radius: 4px;
-}
-
-.calendar{
-	width: 15px;
-	height: 15px;
 	background-image: url(../img/calendar.svg);
-	margin: 18px 19px 17px 0;
-	padding: 0;
-	border: 0;
+	background-repeat: no-repeat;
+	background-position: 386px;
 }
 
 .depature-date-container{
@@ -1545,9 +1584,12 @@ h3, p{
 }
 
 .depature-date-field{
-	width: 390px;
+	width: 420px;
 	background: #F2F2F2;
 	border-radius: 4px;
+	background-image: url(../img/calendar.svg);
+	background-repeat: no-repeat;
+	background-position: 386px;
 }
 
 .warning{
@@ -1571,6 +1613,10 @@ h3, p{
 	margin-left: 225px;
 }
 
+.field-count-people{
+	margin: 0;
+}
+
 .count-people{
 	display: flex;
 	align-items: center;
@@ -1582,6 +1628,7 @@ h3, p{
 
 .kids-count{
 	width: 54px;
+		margin-left: 56px;
 }
 
 .kids-count-container{
@@ -1591,75 +1638,124 @@ h3, p{
 	border-radius: 4px;
 }
 
-.info-icon{
-	width: 25px;
-	height: 25px;
-	margin-right: 18px;
-	background-color: #83B3D3;
-	border-radius: 50%;
-	text-align: center;
-}
-
-.info-icon-img{
-
-}
-
 .adults-count-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
 	width: 133px;
 	height: 50px;
-	display: flex;
-}
-
-.adults-count-field{
-	width: 133px;
-	padding: 0;
+	background: #F2F2F2;
 	border-radius: 4px;
 }
 
-.tooltip{
-	display: block;
-	background: #333333;
-	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-	border-radius: 10px;
-	width: 256px;
-	height: fit-content;
-	padding: 15px 18px 18px 22px;		
-	text-align: s;
-}
-
-.tooltip-text{
-	font-family: PT Sans;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 20px;
-
-	color: #FFFFFF;
-
-}
-
-
-
-.kids-count-container{
-	width: 133px;
+.adults-count-field{
+	color: #000000;
+	width: 50px;
 	height: 50px;
-	display: flex;
-	align-items: center;
-}
-
-.kids-count-field{
-	width: 133px;
 	background: transparent;
 	padding: 0;
 	border-radius: 4px;
 }
 
-.minus-icon{
-	fill: #000000;
-	opacity: 0.3;
+.tooltip{
+	position: absolute;
+	color: #242424;
+}
 
+.tooltip-toggle{
+	display: block;
+	border-radius: 50%;
+	background-color: #83B3D3;
+	border: none;
+	width: 25px;
+	height: 25px;
+}
+
+.tooltip-icon {
+	width: 1px;
+	height: 9px;
+  color: #242424;
+  display: block;
+  margin-left: 6px;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #83B3D3;
+}
+
+.tooltip-text{
+	display: block;
+	font-family: PT Sans;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	background: #333333;
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	color: #FFFFFF;
+	padding: 15px 18px 18px 22px;
+	width: 256px;
+	position: absolute;
+	top: 100%;
+	margin-top: 15px;
+	transform: translateX(-50%);
+	z-index: 1;
+	display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.kids-count-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	width: 133px;
+	height: 50px;
+	background: #F2F2F2;
+	border-radius: 4px;
+}
+
+.kids-count-field{
+	color: #000000;
+	width: 50px;
+	height: 50px;
+	background: transparent;
+	padding: 0;
+	border-radius: 4px;
+}
+
+.kids-count-field:focus {
+	outline: none;
+}
+
+.minus{
+	width: 13px;
+	height: 13px;
+	border: none;
+	margin-left: 19px;
+	padding: 0;
+}
+
+.plus{
+	width: 13px;
+	height: 13px;
+	border: none;
+	margin-right: 19px;
+	padding: 0;
+}
+
+.minus-icon{
+	width: 13px;
+	height: 13px;
+	fill: #000000;
 }
 
 .plus-icon{
+	width: 13px;
+	height: 13px;
 	fill: #000000;
 	opacity: 0.3;
 }
@@ -1685,6 +1781,7 @@ h3, p{
 .adults-kids-count{
 	display: flex;
 }
+
 
 
 /*.modal-container{
