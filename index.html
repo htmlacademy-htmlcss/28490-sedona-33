@@ -202,27 +202,29 @@
             <div class="field-group">
               <label class="arriving-data">Дата заезда:</label>
               <div class="arriving-data-container">
-                <input class="arriving-data-field field" type="text" name="arriving-data" placeholder="27 апреля 2020">                
-                <button class="calendar"></button>     
+                <input class="arriving-data-field field" type="text" name="arriving-data" placeholder="27 апреля 2020">                   
               </div>
             </div>
             <p class="warning">Мы не можем отправить вас в прошлое.</p>
             <div class="field-group">
               <label class="depature-date">Дата выезда:</label>
               <div class="depature-date-container">
-                <input class="depature-date-field field" type="text" name="depature-data" placeholder="1 сентября 2021">
-                <button class="calendar"></button>               
+                <input class="depature-date-field field" type="text" name="depature-data" placeholder="1 сентября 2021">            
               </div>
 
             </div>
             <p class="free-data">На эти даты есть свободные номера. Пока есть.</p>
-            <div class="adults-kids-count">
+            <div class="field-group">
               <div class="field-group field-count-people">
                 <label class="adults-count">Взрослые:</label>
                 <div class="adults-count-container">
-                  <svg class="minus-icon" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="M0 0v1h13V0H0Z"/></svg>
+                  <button class="minus" type="button">
+                    <svg class="minus-icon" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="M0 0v1h13V0H0Z"/></svg>
+                  </button>
                   <input class="adults-count-field field" type="text" name="aduld-count" placeholder="2">
-                  <svg class="plus-icon" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>
+                  <button class="plus" type="button">
+                    <svg class="plus-icon" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>                      
+                  </button> 
                 </div>
                 
               </div>
@@ -230,28 +232,29 @@
                 
                 <label class="kids-count">Дети:</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
-                    <svg class="info-icon" width="1" height="9" viewBox="0 0 1 9" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#fff"><path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h1v9H0z"/></clipPath></defs></svg>
-                  </button>
-                     <span class="tooltip-text" role="tooltip" и id="tooltip-label">
-                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-                    </span>               
+                  <button class="tooltip-toggle" type="Button" role="tooltip" id="tooltip-label">
+                    <svg class="tooltip-icon" width="1" height="9" viewBox="0 0 1 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#fff"><path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z"/></g><defs><clipPath id="a"><path d="M0 0h1v9H0z"/></clipPath></defs></svg>
+                 </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">   
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>          
                 </span>
                 </div>
-              
-                </div>
                 <div class="kids-count-container">
-                  <svg class="minus-icon" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="M0 0v1h13V0H0Z"/></svg>
-                  <input class="kids-count-field field" type="text" name="aduld-count" placeholder="1">  
-                  <svg class="plus-icon" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>                 
+                  <button class="minus" type="button">
+                    <svg class="minus-icon" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="M0 0v1h13V0H0Z"/></svg>
+                  </button>
+                  <input class="kids-count-field field" type="text" name="aduld-count" placeholder="1"> 
+                  <button class="plus" type="button">
+                    <svg class="plus-icon" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>                      
+                  </button>                
+                </div>              
                 </div>
-
-              </div> 
-                <button class="modal-search-button">
+              <button class="modal-search-button">
                Найти 
-              </button>                          
-            </div>
-  
+              </button>   
+              </div>                        
+            </div>  
             </div>
           </form>
       </div>  
